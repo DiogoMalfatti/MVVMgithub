@@ -42,42 +42,11 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
     //implementation 'com.amitshekhar.android:rx2-android-networking:1.0.2'
 
-    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    implementation "androidx.recyclerview:recyclerview:1.2.1"
     implementation 'android.arch.lifecycle:extensions:1.1.1'
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
     implementation 'io.openharmony.tpc.thirdlib:rx2-android-networking:1.0.0'
     implementation 'io.reactivex.rxjava2:rxjava:2.2.18'
     implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
 
-    def lifecycle_version = "2.5.0-beta01"
-    def arch_version = "2.1.0"
-
-    // ViewModel
-    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
-    // ViewModel utilities for Compose
-    implementation "androidx.lifecycle:lifecycle-viewmodel-compose:$lifecycle_version"
-    // LiveData
-    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
-    // Lifecycles only (without ViewModel or LiveData)
-    implementation "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_version"
-
-    // Saved state module for ViewModel
-    implementation "androidx.lifecycle:lifecycle-viewmodel-savedstate:$lifecycle_version"
-
-    // Annotation processor
-    //kapt "androidx.lifecycle:lifecycle-compiler:$lifecycle_version"
-    // alternately - if using Java8, use the following instead of lifecycle-compiler
-    implementation "androidx.lifecycle:lifecycle-common-java8:$lifecycle_version"
-
-
-    // optional - helpers for implementing LifecycleOwner in a Service
-    implementation "androidx.lifecycle:lifecycle-service:$lifecycle_version"
-
-    // optional - ProcessLifecycleOwner provides a lifecycle for the whole application process
-    implementation "androidx.lifecycle:lifecycle-process:$lifecycle_version"
-
-    // optional - ReactiveStreams support for LiveData
-    implementation "androidx.lifecycle:lifecycle-reactivestreams-ktx:$lifecycle_version"
-
-    // optional - Test helpers for LiveData
-    testImplementation "androidx.arch.core:core-testing:$arch_version"
 }

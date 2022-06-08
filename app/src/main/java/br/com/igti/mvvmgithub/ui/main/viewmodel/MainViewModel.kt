@@ -11,6 +11,7 @@ import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
 
 class MainViewModel(private val mainRepository: MainRepository) : ViewModel() {
+
     private val users = MutableLiveData<Resource<List<User>>>()
     private val compositeDisposable = CompositeDisposable()
 
@@ -31,6 +32,7 @@ class MainViewModel(private val mainRepository: MainRepository) : ViewModel() {
                 })
         )
     }
+
     override fun onCleared() {
         super.onCleared()
         compositeDisposable.dispose()

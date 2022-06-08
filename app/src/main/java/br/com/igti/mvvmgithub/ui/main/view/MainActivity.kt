@@ -1,5 +1,6 @@
 package br.com.igti.mvvmgithub.ui.main.view
 
+import androidx.lifecycle.ViewModelProviders
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -49,6 +50,7 @@ class MainActivity : AppCompatActivity() {
     private fun setupObserver() {
         mainViewModel.getUsers().observe(this, Observer {
             when (it.status) {
+
                 Status.SUCCESS -> {
                     val progressBar = findViewById<ProgressBar>(R.id.progressBar)
                     progressBar.visibility = View.GONE
@@ -82,3 +84,4 @@ class MainActivity : AppCompatActivity() {
             ViewModelFactory(ApiHelper(ApiServiceImplement()))
         ).get(MainViewModel::class.java)
     }
+}

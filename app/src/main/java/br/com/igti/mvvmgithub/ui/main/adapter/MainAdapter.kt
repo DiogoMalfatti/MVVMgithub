@@ -1,6 +1,5 @@
 package br.com.igti.mvvmgithub.ui.main.adapter
 
-
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
